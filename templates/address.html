@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-7 ftco-animate">
+						<form action="add"  method="POST"  class="billing-form">
+                            {%  csrf_token %}
+
+                                            <h3 class="mb-4 billing-heading">Billing Details</h3>
+                                <div class="row align-items-end">
+                                    <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="firstname">Firt Name</label>
+                                      <input type="text" name="FirtName" class="form-control" placeholder="">
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="lastname">Last Name</label>
+                                      <input type="text" name="LastName" class="form-control" placeholder="">
+                                    </div>
+                                </div>
+
+                                    <div class="w-100"></div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                        <label for="streetaddress">Street Address</label>
+                                      <input type="text" name="address" class="form-control" placeholder="House number and street name">
+                                    </div>
+                                    </div>
+                                    <div class="col-md-6">
+
+                                    </div>
+                                    <div class="w-100"></div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                        <label for="towncity">Town / City</label>
+                                      <input type="text" name="town" class="form-control" placeholder="">
+                                    </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="postcodezip">Postcode / ZIP *</label>
+                                      <input type="text" name="pin" class="form-control" placeholder="">
+                                    </div>
+                                    </div>
+                                    <div class="w-100"></div>
+                                    <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="phone">Phone</label>
+                                      <input type="text" name="phone" class="form-control" placeholder="">
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="emailaddress">Email Address</label>
+                                      <input type="email" name="email" class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                {#                    <p><a href="#"class="btn btn-primary py-3 px-4">Place an order</a></p>#}
+                                   <input style="background-color:forestgreen ; " type="submit" name="signup" value="Create User">
+
+
+                                </div>
+
+
+	          </form><!-- END -->
+					</div>
+
+        </div>
+      </div>
+    </section> <!-- .section -->
+
+
+    {% endblock %}
